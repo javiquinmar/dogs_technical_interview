@@ -15,6 +15,6 @@
 //    return view('page-manager');
 //});
 
-Route::get('{any}', function () {
+Route::get('/', function () {
     return view('page-manager');
-})->where('any', '.*');
+});
