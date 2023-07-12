@@ -1,4 +1,6 @@
 
+
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * include Vue and Vue Resource. This gives a great starting point for
@@ -15,7 +17,9 @@ require('./bootstrap');
 
 Vue.component('page-manager', require('./components/PageManager.vue'));
 Vue.component('nav-menu', require('./components/NavMenu.vue'));
-Vue.component('dogs', require('./components/Pages/Dogs.vue'));
+Vue.component('dogs-index', require('./components/Pages/Dogs/DogsIndex.vue'));
+Vue.component('dogs-table', require('./components/Pages/Dogs/DogsTable.vue'));
+Vue.component('dogs-form', require('./components/Pages/Dogs/DogsForm.vue'));
 Vue.component('breeds', require('./components/Pages/Breeds.vue'));
 Vue.component('sizes', require('./components/Pages/Sizes.vue'));
 Vue.component('colors', require('./components/Pages/Colors.vue'));
@@ -23,3 +27,7 @@ Vue.component('colors', require('./components/Pages/Colors.vue'));
 const app = new Vue({
     el: '#app'
 });
+
+import Toast from "vue-toastification";
+// Import the CSS or use your own!
+// import "vue-toastification/dist/index.css";
