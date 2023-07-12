@@ -14,6 +14,12 @@ require('./bootstrap');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('page-manager', require('./components/PageManager.vue'));
+Vue.component('nav-menu', require('./components/NavMenu.vue'));
+Vue.component('dogs', require('./components/Pages/Dogs.vue'));
+Vue.component('breeds', require('./components/Pages/Breeds.vue'));
+Vue.component('sizes', require('./components/Pages/Sizes.vue'));
+Vue.component('colors', require('./components/Pages/Colors.vue'));
 
 const app = new Vue({
     el: '#app'
