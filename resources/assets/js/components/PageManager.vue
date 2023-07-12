@@ -2,7 +2,9 @@
   <div>
     <nav-menu :pages="pages" @changePage="changePage"></nav-menu>
 
-    <component v-bind:is="currentPage"></component>
+    <div class="container mx-auto">
+      <component v-bind:is="currentPage"></component>
+    </div>
   </div>
 </template>
 
@@ -14,12 +16,12 @@
       data(){
         return {
           pages: [
-            { name: 'dogs', label: 'Perros'},
+            { name: 'dogs-index', label: 'Perros'},
             { name: 'breeds', label: 'Razas'},
             { name: 'sizes', label: 'Tamaños'},
             { name: 'colors', label: 'Colores'},
           ],
-          currentPage: 'dogs',
+          currentPage: 'dogs-index',
         }
       },
       methods: {
