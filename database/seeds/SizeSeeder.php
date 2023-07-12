@@ -7,12 +7,13 @@ class SizeSeeder extends Seeder
 {
     public function run()
     {
+        $createdAt = \Carbon\Carbon::now();
         $sizes = [
-            ['name' => 'Muy pequeño'],
-            ['name' => 'Pequeño'],
-            ['name' => 'Mediano'],
-            ['name' => 'Grande'],
-            ['name' => 'Muy grande'],
+            ['name' => 'Muy pequeño', 'created_at' => $createdAt],
+            ['name' => 'Pequeño', 'created_at' => $createdAt],
+            ['name' => 'Mediano', 'created_at' => $createdAt],
+            ['name' => 'Grande', 'created_at' => $createdAt],
+            ['name' => 'Muy grande', 'created_at' => $createdAt],
         ];
 
         Size::insert($sizes);

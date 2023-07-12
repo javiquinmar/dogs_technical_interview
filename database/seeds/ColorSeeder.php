@@ -7,12 +7,14 @@ class ColorSeeder extends Seeder
 {
     public function run()
     {
+        $createdAt = \Carbon\Carbon::now();
+
         $colors = [
-            ['name' => 'Blanco'],
-            ['name' => 'Negro'],
-            ['name' => 'Gris'],
-            ['name' => 'Marrón'],
-            ['name' => 'Amarillo'],
+            ['name' => 'Blanco', 'created_at' => $createdAt],
+            ['name' => 'Negro', 'created_at' => $createdAt],
+            ['name' => 'Gris', 'created_at' => $createdAt],
+            ['name' => 'Marrón', 'created_at' => $createdAt],
+            ['name' => 'Amarillo', 'created_at' => $createdAt],
         ];
 
         Color::insert($colors);

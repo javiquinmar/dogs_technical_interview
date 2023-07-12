@@ -20,15 +20,17 @@ class DogSeeder extends Seeder
 
         $numDogs = 40; // Define el número de registros que deseas generar
         $dogs = [];
+        $createdAt = \Carbon\Carbon::now();
 
         for ($i = 0; $i < $numDogs; $i++) {
             $dogs[] = [
-                'name'     => $faker->name,
-                'breed_id' => $breedIds[array_rand($breedIds)],
-                'color_id' => $colorIds[array_rand($colorIds)],
-                'size_id'  => $sizeIds[array_rand($sizeIds)],
-                'age'    => $faker->randomElement([$faker->numberBetween(1, 20), null]),
-                'weight' => $faker->randomElement([$faker->numberBetween(1, 60), null]),
+                'name'       => $faker->name,
+                'breed_id'   => $breedIds[array_rand($breedIds)],
+                'color_id'   => $colorIds[array_rand($colorIds)],
+                'size_id'    => $sizeIds[array_rand($sizeIds)],
+                'age'        => $faker->randomElement([$faker->numberBetween(1, 20), null]),
+                'weight'     => $faker->randomElement([$faker->numberBetween(1, 60), null]),
+                'created_at' => $createdAt,
             ];
         }
 
