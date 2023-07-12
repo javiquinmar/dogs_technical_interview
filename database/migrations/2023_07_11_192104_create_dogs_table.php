@@ -24,6 +24,8 @@ class CreateDogsTable extends Migration
             $table->integer('age')->nullable();
             $table->integer('weight')->nullable();
 
+            $table->string('image_path')->nullable();
+
             $table->timestamps();
         });
     }
