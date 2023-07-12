@@ -1,0 +1,9 @@
+.container {
+  width: 95%
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width:90%
+  }
+}
