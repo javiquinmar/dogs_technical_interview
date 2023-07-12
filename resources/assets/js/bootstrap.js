@@ -31,6 +31,16 @@ Vue.http.interceptors.push((request, next) => {
     next();
 });
 
+import Toast from "vue-toastification";
+// import "vue-toastification/dist/index.css";
+
+const options = {
+    // You can set your default options here
+};
+
+
+Vue.use(Toast, options);
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

@@ -5,6 +5,12 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
+    "@babel/core": "7.19.6",
+    "@babel/generator": "7.19.6",
+    "@babel/compat-data": "7.19.4",
+    "@babel/helper-compilation-targets": "7.19.3",
+    "@babel/helper-create-class-features-plugin": "7.19.0",
+    "@babel/helper-module-transforms": "7.19.6",
     "bootstrap-sass": "3.4.1",
     "gulp": "^3.9.1",
     "jquery": "^3.1.0",
@@ -17,6 +23,7 @@
     "vue-resource": "^1.0.3"
   },
   "dependencies": {
-    "axios": "^1.4.0"
+    "axios": "^1.4.0",
+    "vue-toastification": "^1.7.14"
   }
 }
