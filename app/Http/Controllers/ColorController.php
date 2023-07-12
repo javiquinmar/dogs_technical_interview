@@ -2,42 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Color;
+use App\Http\Resources\ColorResource;
+use App\Http\Resources\Resource;
 use Illuminate\Http\Request;
 
 class ColorController extends Controller
 {
     public function index()
     {
-        //
-    }
-
-    public function create()
-    {
-        //
-    }
-
-    public function store(Request $request)
-    {
-        //
-    }
-
-    public function show($id)
-    {
-        //
-    }
-
-    public function edit($id)
-    {
-        //
-    }
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    public function destroy($id)
-    {
-        //
+        $colors = Resource::collection(Color::orderBy('name')->get(), ColorResource::class);
+        return response()->json($colors);
     }
 }

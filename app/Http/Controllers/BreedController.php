@@ -2,42 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Breed;
+use App\Http\Resources\BreedResource;
+use App\Http\Resources\Resource;
 use Illuminate\Http\Request;
 
 class BreedController extends Controller
 {
     public function index()
     {
-        //
-    }
-
-    public function create()
-    {
-        //
-    }
-
-    public function store(Request $request)
-    {
-        //
-    }
-
-    public function show($id)
-    {
-        //
-    }
-
-    public function edit($id)
-    {
-        //
-    }
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    public function destroy($id)
-    {
-        //
+        $breeds = Resource::collection(Breed::orderBy('name')->get(), BreedResource::class);
+        return response()->json($breeds);
     }
 }
