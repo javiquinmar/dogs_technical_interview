@@ -17,7 +17,7 @@ class DogResource extends Resource
 
     public function toArray()
     {
-        $imageUrl = $this->model->image_path
+        $imageUrl = $this->model->image_path && file_exists(url('images' . DIRECTORY_SEPARATOR . $this->model->image_path))
             ? url('images' . DIRECTORY_SEPARATOR . $this->model->image_path)
             : 'https://cdn.iconscout.com/icon/free/png-512/free-dog-2198-1135748.png?f=avif&w=128';
         return [
