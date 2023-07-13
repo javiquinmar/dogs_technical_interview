@@ -14,7 +14,7 @@ class StoreDogRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'     => ['string', 'max:255', 'required'],
+            'name'     => ['string', 'min:3', 'max:255', 'required'],
             'breed_id' => ['integer', 'required', 'exists:breeds,id'],
             'color_id' => ['integer', 'required', 'exists:colors,id'],
             'size_id'  => ['integer', 'required', 'exists:sizes,id'],
@@ -28,6 +28,7 @@ class StoreDogRequest extends FormRequest
         return [
             'name.required' => 'El nombre es obligatorio',
             'name.string'   => 'El nombre debe ser una cadena',
+            'name.max' => 'El nombre debe contener al menos 3 caracteres',
             'name.max' => 'El nombre no puede tener más de 255 caracteres',
             'breed_id.required' => 'La raza es obligatoria',
             'breed_id.integer' => 'La raza debe ser un número',
@@ -44,6 +45,9 @@ class StoreDogRequest extends FormRequest
             'weight.integer' => 'El peso debe ser un número',
             'weight.min' => 'El peso no puede ser menor a 0',
             'weight.max' => 'El peso no puede ser mayor a 100',
+            'image.image' => 'El archivo debe ser una imagen',
+            'image.mimes' => 'El archivo debe ser una imagen con formato jpeg, png o jpg',
+            'image.max' => 'El archivo no puede ser mayor a 4MB',
         ];
     }
 }
