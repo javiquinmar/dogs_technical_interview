@@ -14,14 +14,15 @@
 ## Instrucciones de instalación
 
 1. Clonar repositorio
-2. Acceder a la carpeta del repositorio
-3. Copiar env-example a .env
+2. Acceder a la carpeta del proyecto
+3. Copiar .env-example a .env
 4. Crear bbdd y configurarla en .env
 5. Lanzar comando composer install en la raíz del proyecto
-6. php artisan generate:keys
+6. php artisan key:generate
 7. php artisan migrate:refresh --seed
-8. npm run dev 
-9. php artisan serve
+8. npm install
+9. npm run dev 
+10. php artisan serve
 
 
 ## Descripción
@@ -35,7 +36,7 @@ Opcionalmente podrás asignarle la edad, peso y una fotografía.
 ## Comentarios de la prueba
 
 El ejercicio en sí no es complejo, me hubiera gustado haber añadido más funcionalidades, como:
- - Añadir la posibilidad de tags, 
+ - Añadir la posibilidad de tags a los perros. 
  - Gestionar también las razas, colores, tamaños...
  - Añadir SweetAlert para la confirmación cuando queremos eliminar algún perro
  - Añadir animaciones
