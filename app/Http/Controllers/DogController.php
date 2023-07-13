@@ -44,6 +44,11 @@ class DogController extends BaseApiController
 
     public function destroy($id)
     {
-        //
+        try {
+            $dog = Dog::destroy($id);
+            return $this->sendResponse($dog, 'Perro eliminado correctamente.');
+        } catch(Throwable $e) {
+            return $this->sendError($e->getMessage());
+        }
     }
 }

@@ -28,7 +28,7 @@
     </div>
 
     <div class="mt-8">
-      <dogs-table :dogs="dogs" @editDog="editDog"></dogs-table>
+      <dogs-table :dogs="dogs" @editDog="editDog" @updateDogs="fetchDogs"></dogs-table>
     </div>
 
   </div>
