@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Razas</h1>
+    <h1 class="text-5xl font-extrabold">Razas</h1>
   </div>
 </template>
 

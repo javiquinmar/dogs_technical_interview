@@ -1,6 +1,6 @@
 <template>
 
-  <nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <nav class="navbar bg-white border-gray-200 dark:bg-gray-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="https://www.europelanguagejobs.com" class="flex items-center">
         <img src="https://static.europelanguagejobs.com/assets/images/logo-square-white.jpg" class="h-16 mr-3" alt="Europe Language Jobs" />

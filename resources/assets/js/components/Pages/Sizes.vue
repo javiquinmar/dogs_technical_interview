@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Tamaños</h1>
+    <h1 class="text-5xl font-extrabold">Tamaños</h1>
   </div>
 </template>
 

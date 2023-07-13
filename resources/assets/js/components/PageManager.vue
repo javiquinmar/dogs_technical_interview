@@ -2,7 +2,7 @@
   <div>
     <nav-menu :pages="pages" @changePage="changePage"></nav-menu>
 
-    <div class="container mx-auto">
+    <div class="container mx-auto my-8">
       <component v-bind:is="currentPage"></component>
     </div>
   </div>
