@@ -1,40 +1,61 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<p align="center"><img src="https://cdn.iconscout.com/icon/free/png-512/free-dog-2198-1135748.png?f=avif&w=128"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# Dogs App
+### Web SPA para gestionar una base de datos de perros.
 
-## About Laravel
+## Herramientas y versiones
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+- Laravel 5.3.31
+- PHP 7.0.30
+- Composer 2.2
+- Node 8.11.4
+- NPM 5.6.0
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Instrucciones de instalación
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+1. Clonar repositorio
+2. Acceder a la carpeta del repositorio
+3. Copiar env-example a .env
+4. Crear bbdd y configurarla en .env
+5. Lanzar comando composer install en la raíz del proyecto
+6. php artisan generate:keys
+7. php artisan migrate:refresh --seed
+8. npm run dev 
+9. php artisan serve
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+## Descripción
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+Web donde podremos listar, crear, editar y eliminar perros.
 
-## Contributing
+Cada perro tiene su nombre, raza, color y tamaño como campos obligatorios.
+Opcionalmente podrás asignarle la edad, peso y una fotografía.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
 
-## Security Vulnerabilities
+## Comentarios de la prueba
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+El ejercicio en sí no es complejo, me hubiera gustado haber añadido más funcionalidades, como:
+ - Añadir la posibilidad de tags, 
+ - Gestionar también las razas, colores, tamaños...
+ - Añadir SweetAlert para la confirmación cuando queremos eliminar algún perro
+ - Añadir animaciones
+ - Añadir al select un "placeholder"
+ - Validaciones en el lado front con VUE
+ - Encapsular alguno más el código en el front.
 
-## License
+He de decir que "sufrido" con las versiones antiguas.
+Estoy acostumbrado a trabajar con versiones recientes, tanto de Laravel, PHP, Node, NPM... 
+y creo que casi he tardado más en configurar todo y "pelearme" con las incompatibilidades cuando quería
+instalar algún paquete, que en el propio código.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Aunque no es lo ideal, he utilizado algunos CDNs para evitar las incompatibilidades al instalar los paquetes.
+
+
+### Gracias
+
+Gracias por la oportunidad.
+
+Espero que sea de vuestro agrado.
+
+Un saludo!
+Javier Quintana
