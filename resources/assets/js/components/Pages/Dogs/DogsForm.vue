@@ -36,7 +36,7 @@
           <img :src="dog.image" :alt="dog.name">
         </div>
         <label for="image" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Imagen</label>
-        <input type="file" name="image" class="form-control" @change="onImageChange">
+        <input ref='image' type="file" name="image" class="form-control" @change="onImageChange">
       </div>
 
       <button type="submit" @click.prevent="saveDog()" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Guardar</button>
@@ -122,6 +122,7 @@
               })
               .finally(() => {
                 this.dog.image = null;
+                this.$refs.image.value = null;
                 this.loading = false
               })
           ;
@@ -143,6 +144,7 @@
               })
               .finally(() => {
                 this.dog.image = null;
+                this.$refs.image.value = null;
                 this.loading = false
               })
           ;
