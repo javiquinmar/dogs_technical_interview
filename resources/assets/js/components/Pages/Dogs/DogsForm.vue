@@ -7,40 +7,40 @@
     </div>
     <form class="space-y-6" action="#">
       <div>
-        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre *</label>
         <input type="text" v-model="dog.name" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Escribe el nombre del perro..." required>
       </div>
       <div>
-        <label for="breed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Raza</label>
+        <label for="breed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Raza *</label>
         <select v-model="dog.breed_id" id="breed" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           <option v-for="breed in breeds" :key="breed.id" :value="breed.id">{{ breed.name }}</option>
         </select>
       </div>
       <div>
-        <label for="color" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Color</label>
+        <label for="color" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Color *</label>
         <select v-model="dog.color_id" id="color" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           <option v-for="color in colors" :key="color.id" :value="color.id">{{ color.name }}</option>
         </select>
       </div>
       <div>
-        <label for="size" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tamaño</label>
+        <label for="size" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tamaño *</label>
         <select v-model="dog.size_id" id="size" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           <option v-for="size in sizes" :key="size.id" :value="size.id">{{ size.name }}</option>
         </select>
       </div>
       <div>
-        <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Edad</label>
+        <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Edad <span class="text-xs">(opcional)</span></label>
         <input type="number" v-model="dog.age" name="age" id="age" min="0" max="30" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Años del perro...">
       </div>
       <div>
-        <label for="weight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Peso</label>
+        <label for="weight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Peso <span class="text-xs">(opcional)</span></label>
         <input type="number" v-model="dog.weight" name="weight" id="weight" min="0" max="100" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Peso apróximado del perro...">
       </div>
       <div>
         <div v-if="dog.image && typeof(dog.image) === 'string'" class="my-4">
           <img :src="dog.image" :alt="dog.name">
         </div>
-        <label for="image" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Imagen</label>
+        <label for="image" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Imagen <span class="text-xs">(opcional)</span></label>
         <input ref='image' type="file" name="image" class="form-control" @change="onImageChange">
       </div>
 
