@@ -19,4 +19,22 @@ class Dog extends Model
     public function size(){
         return $this->belongsTo(Size::class);
     }
+
+    public function assignDataFromRequest($request){
+        $this->name     = $request->name;
+        $this->breed_id = $request->breed_id;
+        $this->color_id = $request->color_id;
+        $this->size_id  = $request->size_id;
+        $this->age      = $request->age;
+        $this->weight   = $request->weight;
+
+
+        if ($request->image) {
+            $imageName = time().'.'.$request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images'), $imageName);
+            $this->image_path = $imageName;
+        }
+
+        return $this;
+    }
 }

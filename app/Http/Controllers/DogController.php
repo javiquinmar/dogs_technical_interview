@@ -20,20 +20,7 @@ class DogController extends BaseApiController
     {
         try {
             $dog = new Dog;
-            $dog->name     = $request->name;
-            $dog->breed_id = $request->breed_id;
-            $dog->color_id = $request->color_id;
-            $dog->size_id  = $request->size_id;
-            $dog->age      =  $request->age;
-            $dog->weight   =  $request->weight;
-
-
-            if ($request->image) {
-                $imageName = time().'.'.$request->image->getClientOriginalExtension();
-                $request->image->move(public_path('images'), $imageName);
-                $dog->image_path = $imageName;
-            }
-
+            $dog->assignDataFromRequest($request);
             $dog->save();
 
             return $this->sendResponse((new DogResource($dog))->toArray(), 'Perro creado correctamente.');
@@ -45,8 +32,11 @@ class DogController extends BaseApiController
     public function update(StoreDogRequest $request, $id)
     {
         try {
-            Dog::find($id)->update($request->all());
-            return $this->sendResponse(null, 'Perro actualizado correctamente.');
+            $dog = Dog::find($id);
+            $dog->assignDataFromRequest($request);
+            $dog->update();
+
+            return $this->sendResponse($dog, 'Perro actualizado correctamente.');
         } catch(Throwable $e) {
             return $this->sendError($e->getMessage());
         }
