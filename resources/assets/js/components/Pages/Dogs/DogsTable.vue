@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div v-if="loading" class="loading-overlay">
+      <div class="loading">
+        <pulse-loader :loading="true"></pulse-loader>
+      </div>
+    </div>
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
       <div class="p-4 bg-white dark:bg-gray-900">
         <label for="table-search" class="sr-only">Search</label>

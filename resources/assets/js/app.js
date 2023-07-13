@@ -24,6 +24,8 @@ Vue.component('breeds', require('./components/Pages/Breeds.vue'));
 Vue.component('sizes', require('./components/Pages/Sizes.vue'));
 Vue.component('colors', require('./components/Pages/Colors.vue'));
 
+Vue.component('pulse-loader', require('vue-spinner/src/PulseLoader.vue'));
+
 const app = new Vue({
     el: '#app'
 });

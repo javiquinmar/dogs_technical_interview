@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div v-if="loading" class="loading-overlay">
+      <div class="loading">
+        <pulse-loader :loading="true"></pulse-loader>
+      </div>
+    </div>
     <form class="space-y-6" action="#">
       <div>
         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>

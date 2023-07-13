@@ -1,6 +1,11 @@
 <template>
   <div>
-    <div class="flex justify-between items-center my-">
+    <div v-if="loading" class="loading-overlay">
+      <div class="loading">
+        <pulse-loader :loading="true"></pulse-loader>
+      </div>
+    </div>
+    <div class="flex justify-between items-center">
       <h1 class="text-5xl font-extrabold">Perros</h1>
       <!-- Modal toggle -->
       <button @click="resetCurrentDog" ref="modal-open-button" data-modal-target="add-modal" data-modal-toggle="add-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
