@@ -16,6 +16,7 @@ class SizeResource
         return [
             'id'     => $this->model->id,
             'name'   => $this->model->name,
+            'order'  => $this->model->order,
         ];
     }
 }

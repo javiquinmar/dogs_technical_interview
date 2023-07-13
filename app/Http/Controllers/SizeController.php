@@ -11,7 +11,7 @@ class SizeController extends Controller
 {
     public function index()
     {
-        $sizes = Resource::collection(Size::orderBy('name')->get(), SizeResource::class);
+        $sizes = Resource::collection(Size::orderBy('order')->get(), SizeResource::class);
         return response()->json($sizes);
     }
 }
